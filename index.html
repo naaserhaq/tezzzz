@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Kurikulum Almufasi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Author" content="FahmiBurhan">
+
+    <!-- This HTML is coded by "FahmiBurhan"
+            In this html i trying to make an only phone website available
+            and i want user can open this html in offline mode in them phones
+            no need to picture or source from ither file.
+            I place the Almufasi's kurikulum as content
+            Hope you, me from the future, enjoy it. 
+    -->
+
+    <style>
+
+*{
+    margin: 0; padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 12px;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+/* Bagian Header */
+
+header{
+    width: 100%; height: 400px;
+    background-color: black;
+    z-index: -1;
+    box-sizing: border-box;
+    padding: 10%;
+    text-align: center;
+    color: white;
+    font-size: 1em;
+}
+
+#judul{
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 10px auto 30px auto;
+}
+
+
+
+/* Bagian Main Global */
+
+.konten{
+    width: 80%;
+    margin: 0 auto;
+    display: none;
+}
+
+.luar{
+    display: block;
+    width: 100%;
+    margin-top: 5%;
+    padding: 1em 0;
+    background-color: #0071BC;
+    color: white;
+    border-radius: 1em;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.dalam{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -1em;
+    padding: 0.5em;
+    padding-top: 1em;
+    border: 0.2em solid #0071BC;
+    box-sizing: border-box;
+    display: none;
+    font-size: 1.1em;
+}
+
+.list{
+    margin-left: 1.3em;
+    color: black;
+}
+
+.list li a{
+    color: black;
+}
+
+.bantuan{
+    width: 100%; height: 10%;
+    margin-bottom: 80px;
+}
+
+.dalam:target{
+    display: block;
+}
+
+
+/* Bagian Footer */
+
+footer{
+    width: 100%; height: 60px;
+    border-top: 3px solid #0071BC;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 0 8px 0 black;
+}
+
+.navibawah{
+    display: flex;
+    width: 25%; height: 100%;
+    background-color: white;
+    color: black;
+    border: none;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navibawah:focus{
+    outline: none;
+}
+
+.navibawah h1{
+    font-size: 1.4em;
+    height: fit-content;
+}
+
+
+/* Bagian Landing Awal */
+
+
+#dk{display: block;}
+
+#tdk{
+    background-color: #0071BC;
+    color: white;
+}
+
+
+/* Bagian Modal Global */
+
+.covermodal{
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 2;
+    display: none;
+}
+
+.covermodal:target{
+    display: block;
+}
+
+.boxmodal{
+    width: 100%; height: auto;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: 8px 0 16px 0 black;
+}
+
+.headermodal{
+    width: 100%; height: 40px;
+    background-color: #0071BC;
+    color: white;
+    box-sizing: border-box;
+    box-shadow: 4px 0 10px 0 black;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.judulmodal, .xtutup{
+    width: fit-content; height: fit-content;
+    margin: auto 20px;
+}
+
+.xtutup{
+    font-size: 2em;
+    color: white;
+}
+
+.isimodal{
+    width: 80%;
+    margin: 10%;
+    font-size: 1.1em;
+}
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <!-- Bagian Header -->
+
+    <header>
+
+        <p id="open">Selamat Datang!</p>
+        <h1 id="judul">Kurikulum Almufasi</h1>
+
+        <p id="deskripsi">
+            Kurikulum ini adalah kurikulum <b>standar</b> dan
+            <b>wajib</b> bagi seluruh santri Almufasi tanpa
+            terkecuali. Kurikulum ini mencakup berbagai jenjang,
+            mulai dari <b>pra-ma'had</b> (Persiapan dan 
+            <i>Dirasah Khassah</i>), <b>Ma'had</b> (<i>I'dady</i>
+            dan <i>Tsanawy</i>) dan <b>kuliah</b> (Tingkat 1, 2, 3, dan 4).
+        </p>
+        
+    </header>
+
+    
+    <!-- Bagian Konten -->
+
+    <main>
+
+    <!-- Konten DK -->
+
+        <div class="konten" id="dk">
+
+            <a class="quran luar" onclick="detail(0)">Hafalan Quran</a>
+            <div id="isiqurandk" class="dalam">
+                <ul class="list">
+                    <li><a href="#">Juz 27-30</a></li>
+                </ul>
+                <p><br>Total: <b>4 Juz</b></p>
+            </div>
+
+            <a class="hadits luar" onclick="detail(1)">Hafalan Hadits</a>
+            <div id="isihaditsdk" class="dalam">
+                <ul  class="list">
+                    <li><a href="#arbainnawawiyah">Arba'in Nawawiyah</a></li>
+                </ul>
+                <p><br>Total: <b>42 Hadits</b></p>
+            </div>
+
+            <a class="matan luar" onclick="detail(2)">Hafalan Matan</a>
+            <div id="isimatandk" class="dalam">
+                <ul  class="list">
+                    <li><a href="#ajurumiyah">Ajurumiyah</a></li>
+                    <li><a href="#tuhfatulathfal">Tuhfatul Athfal</a></li>
+                    <li><a href="#binaulafal">Binaul Af'al</a></li>
+                </ul>
+                <p><br>Total: <b>61 Bait + Matan</b></p>
+            </div>
+
+            <div class="bantuan"></div>
+
+        </div>
+
+
+                                <!-- Modal Arbaín -->
+
+                        <div class="covermodal" id="arbainnawawiyah">
+
+                            <div class="boxmodal">
+
+                                <div class="headermodal">
+                                    <p class="judulmodal">Tentang Kitab</p>
+                                    <a href="#beranda" class="xtutup" >&times;</a>
+                                </div>
+
+                                <div class="isimodal">
+                                    <p><br>Nama Kitab:<br><b>Arba'in Nawawiyah</b></p>
+                                    <p><br>Nama Penulis:<br><b>Yahya ibn Syaraf An-Nawawy (631 - 676 H)</b></p>
+                                    <p><br>Disiplin Ilmu:<br><b>Hadits</b></p>
+                                    <p><br>Jumlah Bait / Hadits:<br><b>42 Hadits</b></p>
+                                    <p><br>Cetakan Rekomendasi:<br><b>Dar Salam / Dar Minhaj</b></p>
+                                    <p><br>Harga:<br><b>3.00 / 35.00 EGP</b></p>
+                                </div>
+
+                            </div>
+                                    
+                        </div>
+
+        
+
+                                <!-- Modal Ajurumiyah -->
+
+                        <div class="covermodal" id="ajurumiyah">
+
+                            <div class="boxmodal">
+
+                                <div class="headermodal">
+                                    <p class="judulmodal">Tentang Kitab</p>
+                                    <a href="#beranda" class="xtutup" >&times;</a>
+                                </div>
+
+                                <div class="isimodal">
+                                    <p><br>Nama Kitab:<br><b>Ajurumiyah</b></p>
+                                    <p><br>Nama Penulis:<br><b>Muhammad ibn Ajurum (1273 - 1323 H)</b></p>
+                                    <p><br>Disiplin Ilmu:<br><b>Nahwu</b></p>
+                                    <p><br>Jumlah Bait / Hadits:<br><b>-</b></p>
+                                    <p><br>Cetakan Rekomendasi:<br><b>Dar Salam</b></p>
+                                    <p><br>Harga:<br><b>4.00 EGP</b></p>
+                                </div>
+
+                            </div>
+                                    
+                        </div>
+
+
+                                <!-- Modal Tuhfatul Athfal -->
+
+                        <div class="covermodal" id="tuhfatulathfal">
+
+                            <div class="boxmodal">
+
+                                <div class="headermodal">
+                                    <p class="judulmodal">Tentang Kitab</p>
+                                    <a href="#beranda" class="xtutup" >&times;</a>
+                                </div>
+
+                                <div class="isimodal">
+                                    <p><br>Nama Kitab:<br><b>Tuhfatul Athfal</b></p>
+                                    <p><br>Nama Penulis:<br><b>Sulaiman Al-Jamzuri</b></p>
+                                    <p><br>Disiplin Ilmu:<br><b>Tajwid</b></p>
+                                    <p><br>Jumlah Bait / Hadits:<br><b>61 Bait</b></p>
+                                    <p><br>Cetakan Rekomendasi:<br><b>Dar Salam</b></p>
+                                    <p><br>Harga:<br><b>2.00 EGP</b></p>
+                                </div>
+
+                            </div>
+                                    
+                        </div>
+
+
+                                <!-- Modal Binaul Af'al -->
+
+                        <div class="covermodal" id="binaulafal">
+
+                            <div class="boxmodal">
+
+                                <div class="headermodal">
+                                    <p class="judulmodal">Tentang Kitab</p>
+                                    <a href="#beranda" class="xtutup" >&times;</a>
+                                </div>
+
+                                <div class="isimodal">
+                                    <p><br>Nama Kitab:<br><b>Binaul Af'al</b></p>
+                                    <p><br>Nama Penulis:<br><b>Tidak Diketahui</b></p>
+                                    <p><br>Disiplin Ilmu:<br><b>Sharaf</b></p>
+                                    <p><br>Jumlah Bait / Hadits:<br><b>-</b></p>
+                                    <p><br>Cetakan Rekomendasi:<br><b>-</b></p>
+                                    <p><br>Harga:<br><b>-</b></p>
+                                </div>
+
+                            </div>
+                                    
+                        </div>
+
+
+
+    <!-- Konten I'dady -->
+
+        <div class="konten" id="idady">
+
+            <a class="quran luar" onclick="detail(3)">Hafalan Quran</a>
+            <div id="isiquranid" class="dalam">
+                <ul class="list">
+                    <li><a href="#">Juz 23-26</a></li>
+                </ul>
+                <p><br>Total: <b>4 Juz</b></p>
+            </div>
+
+            <a class="hadits luar" onclick="detail(4)">Hafalan Hadits</a>
+            <div id="isihaditsid" class="dalam">
+                <ul  class="list">
+                    <li><a href="#">Muqorror I'dady</a></li>
+                </ul>
+                <p><br>Total: <b>51 Hadits</b></p>
+            </div>
+
+            <a class="matan luar" onclick="detail(5)">Hafalan Matan</a>
+            <div id="isimatanid" class="dalam">
+                <ul  class="list">
+                    <li><a href="#aqidatulawwam">Aqidatul Awwam</a></li>
+                    <li><a href="#baiquniyah">Baiquniyah</a></li>
+                    <li><a href="#jazariyah">Jazariyah</a></li>
+                    <li><a href="#abusyuja">Abu Syuja</a></li>
+                </ul>
+                <p><br>Total: <b>200 Bait + Matan</b></p>
+            </div>
+
+            <div class="bantuan"></div>
+
+        </div>
+
+
+                                <!-- Modal Aqidatul Awwam -->
+
+                        <div class="covermodal" id="aqidatulawwam">
+
+                            <div class="boxmodal">
+
+                                <div class="headermodal">
+                                    <p class="judulmodal">Tentang Kitab</p>
+                                    <a href="#beranda" class="xtutup" >&times;</a>
+                                </div>
+
+                                <div class="isimodal">
+                                    <p><br>Nama Kitab:<br><b>Aqidatul Awwam</b></p>
+                                    <p><br>Nama Penulis:<br><b>Ahmad ibn Ramadhan Al-Marzuqy</b></p>
+                                    <p><br>Disiplin Ilmu:<br><b>Tauhid</b></p>
+                                    <p><br>Jumlah Bait / Hadits:<br><b>57 Bait</b></p>
+                                    <p><br>Cetakan Rekomendasi:<br><b>Dar Hawi</b></p>
+                                    <p><br>Harga:<br><b>4.00 EGP</b></p>
+                                </div>
+
+                            </div>
+                                    
+                        </div>
+
+
+                                <!-- Modal Baiquniyah -->
+
+                        <div class="covermodal" id="baiquniyah">
+
+                            <div class="boxmodal">
+
+                                <div class="headermodal">
+                                    <p class="judulmodal">Tentang Kitab</p>
+                                    <a href="#beranda" class="xtutup" >&times;</a>
+                                </div>
+
+                                <div class="isimodal">
+                                    <p><br>Nama Kitab:<br><b>Baiquniyah</b></p>
+                                    <p><br>Nama Penulis:<br><b>Taha ibn Muhammad Al-Baiquny</b></p>
+                                    <p><br>Disiplin Ilmu:<br><b>Ulumul Hadits</b></p>
+                                    <p><br>Jumlah Bait / Hadits:<br><b>34 Bait</b></p>
+                                    <p><br>Cetakan Rekomendasi:<br><b>Dar Salam</b></p>
+                                    <p><br>Harga:<br><b>3.00 EGP</b></p>
+                                </div>
+
+                            </div>
+                                    
+                        </div>
+
+
+                                <!-- Modal Jazariyah -->
+
+                        <div class="covermodal" id="jazariyah">
+
+                            <div class="boxmodal">
+
+                                <div class="headermodal">
+                                    <p class="judulmodal">Tentang Kitab</p>
+                                    <a href="#beranda" class="xtutup" >&times;</a>
+                                </div>
+
+                                <div class="isimodal">
+                                    <p><br>Nama Kitab:<br><b>Muqaddimah Jazariyah</b></p>
+                                    <p><br>Nama Penulis:<br><b>Muhammad ibn Muhammad Al-Jazary (751 - 833 H)</b></p>
+                                    <p><br>Disiplin Ilmu:<br><b>Tajwid</b></p>
+                                    <p><br>Jumlah Bait / Hadits:<br><b>109 Bait</b></p>
+                                    <p><br>Cetakan Rekomendasi:<br><b>Dar Salam / Dar Minhaj</b></p>
+                                    <p><br>Harga:<br><b>2.00 / 20.00 EGP</b></p>
+                                </div>
+
+                            </div>
+                                    
+                        </div>
+
+
+                                <!-- Modal Abu Syuja -->
+
+                        <div class="covermodal" id="abusyuja">
+
+                            <div class="boxmodal">
+
+                                <div class="headermodal">
+                                    <p class="judulmodal">Tentang Kitab</p>
+                                    <a href="#beranda" class="xtutup" >&times;</a>
+                                </div>
+
+                                <div class="isimodal">
+                                    <p><br>Nama Kitab:<br><b>Al-Ghayah wa At-Taqrib / Ghayatul Ikhtishar</b></p>
+                                    <p><br>Nama Penulis:<br><b>Ahmad ibn Hasan Al-Ashfahany (434 - 500 H)</b></p>
+                                    <p><br>Disiplin Ilmu:<br><b>Fikih</b></p>
+                                    <p><br>Jumlah Bait / Hadits:<br><b>-</b></p>
+                                    <p><br>Cetakan Rekomendasi:<br><b>Dar Salam / Dar Minhaj</b></p>
+                                    <p><br>Harga:<br><b>15.00 / 35.00 EGP</b></p>
+                                </div>
+
+                            </div>
+                                    
+                        </div>
+
+
+    <!-- Konten Tsanawy -->
+
+        <div class="konten" id="tsanawy">
+
+            <a class="quran luar" onclick="detail(6)">Hafalan Quran</a>
+            <div id="isiqurants" class="dalam">
+                <ul class="list">
+                    <li><a href="#">Juz 21-22. 1-4</a></li>
+                </ul>
+                <p><br>Total: <b>6 Juz</b></p>
+            </div>
+
+            <a class="hadits luar" onclick="detail(7)">Hafalan Hadits</a>
+            <div id="isihaditsts" class="dalam">
+                <ul  class="list">
+                    <li><a href="#haditstsanawy">Muqorror Tsanawy</a></li>
+                </ul>
+                <p><br>Total: <b>84 Hadits</b></p>
+            </div>
+
+            <a class="matan luar" onclick="detail(8)">Hafalan Matan</a>
+            <div id="isimatants" class="dalam">
+                <ul  class="list">
+                    <li><a href="#alfiyahibnmalik">Alfiyah Ibn Malik (1-757)</a></li>
+                    <li><a href="#kharidahbahiyyah">Kharidah Bahiyyah</a></li>
+                    <li><a href="#abusyuja">Abu Syuja</a></li>
+                </ul>
+                <p><br>Total: <b>828 Bait + Matan</b></p>
+            </div>
+
+            <div class="bantuan"></div>
+
+        </div>
+
+
+                                        <!-- Modal Alfiyah ibn Malik -->
+
+                        <div class="covermodal" id="alfiyahibnmalik">
+
+                            <div class="boxmodal">
+
+                                <div class="headermodal">
+                                    <p class="judulmodal">Tentang Kitab</p>
+                                    <a href="#beranda" class="xtutup" >&times;</a>
+                                </div>
+
+                                <div class="isimodal">
+                                    <p><br>Nama Kitab:<br><b>Al-Khulashah</b></p>
+                                    <p><br>Nama Penulis:<br><b>Muhammad ibn Abdullah ibn Malik Al-Andalusy (600 - 671 H)</b></p>
+                                    <p><br>Disiplin Ilmu:<br><b>Nahwu Sharaf</b></p>
+                                    <p><br>Jumlah Bait / Hadits:<br><b>1002 Bait</b></p>
+                                    <p><br>Cetakan Rekomendasi:<br><b>Dar Salam</b></p>
+                                    <p><br>Harga:<br><b>10.00 EGP</b></p>
+                                </div>
+
+                            </div>
+                                    
+                        </div>
+
+
+                                    <!-- Modal Kharidah Bahiyyah -->
+
+                        <div class="covermodal" id="kharidahbahiyyah">
+
+                            <div class="boxmodal">
+
+                                <div class="headermodal">
+                                    <p class="judulmodal">Tentang Kitab</p>
+                                    <a href="#beranda" class="xtutup" >&times;</a>
+                                </div>
+
+                                <div class="isimodal">
+                                    <p><br>Nama Kitab:<br><b>Kharidah Bahiyyah</b></p>
+                                    <p><br>Nama Penulis:<br><b>Ahmad ibn Muhammad Ad-Dardir (1127 - 1201 H)</b></p>
+                                    <p><br>Disiplin Ilmu:<br><b>Tauhid</b></p>
+                                    <p><br>Jumlah Bait / Hadits:<br><b>71 Bait</b></p>
+                                    <p><br>Cetakan Rekomendasi:<br><b>Mujallad Araby</b></p>
+                                    <p><br>Harga:<br><b>10.00 EGP</b></p>
+                                </div>
+
+                            </div>
+                                    
+                        </div>
+
+
+                                <!-- Modal Hadits Tsanawy -->
+
+                        <div class="covermodal" id="haditstsanawy">
+
+                            <div class="boxmodal">
+
+                                <div class="headermodal">
+                                    <p class="judulmodal">Tentang Kitab</p>
+                                    <a href="#beranda" class="xtutup" >&times;</a>
+                                </div>
+
+                                <div class="isimodal">
+                                    <p><br>Nama Kitab:<br><b>Taysir Mukhtashar Az-Zabidy</b></p>
+                                    <p><br>Nama Penulis:<br><b>Abdullah ibn Hijazy Asy-Syarqawy (1150 - 1227 H)</b></p>
+                                    <p><br>Disiplin Ilmu:<br><b>Hadits</b></p>
+                                    <p><br>Jumlah Bait / Hadits:<br><b>84 Bait</b></p>
+                                    <p><br>Cetakan Rekomendasi:<br><b>Almufasi</b></p>
+                                    <p><br>Harga:<br><b>Free</b></p>
+                                </div>
+
+                            </div>
+                                    
+                        </div>
+
+
+
+    <!-- Konten Kuliah -->
+
+        <div class="konten" id="kuliah">
+
+            <a class="quran luar" onclick="detail(9)">Hafalan Quran</a>
+            <div id="isiqurans1" class="dalam">
+                <ul class="list">
+                    <li><a href="#">Tingkat 1: Juz 5-8</a></li>
+                    <li><a href="#">Tingkat 2: Juz 9-12</a></li>
+                    <li><a href="#">Tingkat 3: Juz 13-16</a></li>
+                    <li><a href="#">Tingkat 4: Juz 17-20</a></li>
+
+                </ul>
+                <p><br>Total: <b>16 Juz</b></p>
+            </div>
+
+            <a class="hadits luar" onclick="detail(10)">Hafalan Hadit</a>
+            <div id="isihaditss1" class="dalam">
+                <ul  class="list">
+                    <li><a href="#">Umdatul Ahkam</a></li>
+                    <li><a href="#">Bulughul Maram (opsional)</a></li>
+                </ul>
+                <p><br>Total: <b>426 / 1596 Hadits</b></p>
+            </div>
+
+            <!-- Jurusan Lughah -->
+
+            <a class="matan luar" onclick="detail(11)">Hafalan Matan<br>(Jurusan Lughah)</a>
+            <div id="isimatans1lg" class="dalam">
+                <ul  class="list">
+                    <li><a href="#">Alfiyah Ibn Malik (758-1002)</a></li>
+                    <li><a href="#">Jauhar Maknun</a></li>
+                    <li><a href="#">Uqudul Juman</a></li>
+                </ul>
+                <p><br>Total: <b>1535 Bait</b></p>
+            </div>
+
+            <!-- Jurusan Tafsir -->
+
+            <a class="matan luar" onclick="detail(12)">Hafalan Matan<br>(Jurusan Tafsir)</a>
+            <div id="isimatans1tf" class="dalam">
+                <ul  class="list">
+                    <li><a href="#">Alfiyah Ibn Malik (758-1002)</a></li>
+                    <li><a href="#">Jauharah Tauhid</a></li>
+                    <li><a href="#">Sullam Munawraq</a></li>
+                    <li><a href="#">Manzhumah Zamzami</a></li>
+                    <li><a href="#">Alfiyah Tafsir</a></li>
+                </ul>
+                <p><br>Total: <b>1690 Bait</b></p>
+            </div>
+
+            <!-- Jurusan Hadits -->
+
+            <a class="matan luar" onclick="detail(13)">Hafalan Matan<br>(Jurusan Hadits)</a>
+            <div id="isimatans1hd" class="dalam">
+                <ul  class="list">
+                    <li><a href="#">Alfiyah Ibn Malik (758-1002)</a></li>
+                    <li><a href="#">Jauharah Taudhid</a></li>
+                    <li><a href="#">Sullam Munawraq</a></li>
+                    <li><a href="#">Qashab Sukkar</a></li>
+                    <li><a href="#">Alfiyah Iraqy</a></li>
+                </ul>
+                <p><br>Total: <b>1737 Bait</b></p>
+            </div>
+
+            <!-- Jurusan Akidah -->
+
+            <a class="matan luar" onclick="detail(14)">Hafalan Matan<br>(Jurusan Akidah)</a>
+            <div id="isimatans1ak" class="dalam">
+                <ul  class="list">
+                    <li><a href="#">Alfiyah Ibn Malik (758-1002)</a></li>
+                    <li><a href="#">Jauharah Tauhid</a></li>
+                    <li><a href="#">Sullam Munawraq</a></li>
+                </ul>
+                <p><br>Total: <b>532 Bait</b></p>
+            </div>
+
+            <!-- Jurusan Syariah -->
+
+            <a class="matan luar" onclick="detail(15)">Hafalan Matan<br>(Jurusan Syariah)</a>
+            <div id="isimatans1sy" class="dalam">
+                <ul  class="list">
+                    <li><a href="#">Alfiyah Ibn Malik (758-1002)</a></li>
+                    <li><a href="#">Rahabiyah</a></li>
+                    <li><a href="#">Tashilut Thuruqat</a></li>
+                    <li><a href="#">Shafwatuz Zubad</a></li>
+                </ul>
+                <p><br>Total: <b>1723 Bait</b></p>
+            </div>
+
+            <!-- Jurusan Quran -->
+
+            <a class="matan luar" onclick="detail(16)">Hafalan Matan<br>(Jurusan Quran)</a>
+            <div id="isimatans1qr" class="dalam">
+                <ul  class="list">
+                    <li><a href="#">Alfiyah Ibn Malik (758-1002)</a></li>
+                    <li><a href="#">Manzhumah Zamzami</a></li>
+                    <li><a href="#">Syathibiyah</a></li>
+                    <li><a href="#">Durrah Mudhiyah</a></li>
+                </ul>
+                <p><br>Total: <b>1816 Bait</b></p>
+            </div>
+
+            <!-- Jurusan Dirasat -->
+
+            <a class="matan luar" onclick="detail(17)">Hafalan Matan<br>(Dirasat)</a>
+            <div id="isimatans1dr" class="dalam">
+                <ul  class="list">
+                    <li><a href="#">Penjurusan Lughah (1535 Bait)</a></li>
+                    <li><a href="#">Penjurusan Tafsir (1690 Bait)</a></li>
+                    <li><a href="#">Penjurusan Hadits (1737 Bait)</a></li>
+                    <li><a href="#">Penjurusan Akidah (532 Bait)</a></li>
+                    <li><a href="#">Penjurusan Syariah (1723 Bait)</a></li>
+                    <li><a href="#">Penjurusan Quran (1816 Bait)</a></li>
+                </ul>
+                <p><br>Total: <b>Opsional</b></p>
+            </div>
+
+            <div class="bantuan"></div>
+
+        </div>
+        
+    </main>
+
+   
+    <!-- Bagian Footer -->
+
+    <footer>
+
+        <button id="tdk" class="navibawah" onclick="ganti(0)">
+            <h1>DK</h1>
+        </button>
+
+        <button class="navibawah" onclick="ganti(1)">
+            <h1>Id</h1>
+        </button>
+
+        <button class="navibawah" onclick="ganti(2)">
+            <h1>Ts</h1>
+        </button>
+
+        <button class="navibawah" onclick="ganti(3)">
+            <h1>S1</h1>
+        </button>
+
+    </footer>
+
+
+    <script>
+
+function ganti(a){
+    var konten = document.getElementsByClassName("konten");
+    var tombol = document.getElementsByClassName("navibawah")
+    for(b = 0; b < konten.length; b++){
+    konten[b].style.display = "none";
+    tombol[b].style.backgroundColor = "white";
+    tombol[b].style.color = "black";
+    }
+    konten[a].style.display = "block";
+    tombol[a].style.backgroundColor = "#0071BC";
+    tombol[a].style.color = "white";
+}
+
+
+function detail(d){
+    var dalam = document.getElementsByClassName("dalam");
+
+    if(dalam[d].style.display === "block"){
+        dalam[d].style.display = "none";
+    }else{
+        for( b = 0 ; b < dalam.length; b++ ) {
+        dalam[b].style.display = "none";
+        }
+        dalam[d].style.display = "block";
+    }
+
+    /* Sebenarnya ada command lain yang lebih simple
+    dalam[d].classList.toggle("show");
+    "show" ini membuat class di css dalam bentuk {display = block;}.
+    Tapi aku memilih command ini karena dia tidak mengharuskan
+    untuk membuat class baru di css.*/
+}
+
+
+// function modal(){
+//     var cover = document.getElementById("covermodal");
+//     cover.style.display = "block";
+// }
+
+    </script>
+
+</body>
+
+</html>
